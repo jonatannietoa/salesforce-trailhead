@@ -1,0 +1,26 @@
+<!--
+ - Created by jonatan.nieto on 21/06/2017.
+ -->
+
+<aura:component description="accDisplay">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="accountRecord" type="Object" />
+
+    <force:recordData recordId="{!v.recordId}"
+                      targetRecord ="{!v.record}"
+                      targetFields ="{!v.simpleRecord}"
+                      fields="Id, Name"/>
+
+    <label class="slds-form-element__label">Name: </label>
+    <ui:outputText value="{!v.accountRecord.Name}"/>
+
+    <label class="slds-form-element__label">Industry: </label>
+    <ui:outputText value="{!v.accountRecord.Industry}"/>
+
+    <label class="slds-form-element__label">Description: </label>
+    <ui:outputTextArea value="{!v.accountRecord.Description}"/>
+
+    <label class="slds-form-element__label">Phone: </label>
+    <ui:outputPhone value="{!v.accountRecord.Phone}"/>
+</aura:component>
