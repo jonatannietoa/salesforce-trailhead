@@ -2,7 +2,7 @@
  - Created by jonatan.nieto on 21/06/2017.
  -->
 
-<aura:component description="accEdit">
+<aura:component description="accEdit" implements="flexipage:availableForRecordHome, force:hasRecordId">
     <aura:attribute name="recordId" type="String" />
     <aura:attribute name="record" type="Object" />
     <aura:attribute name="accountRecord" type="Object" />
