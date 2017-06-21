@@ -14,12 +14,15 @@
 
     <label class="slds-form-element__label">Name: </label>
     <ui:outputText value="{!v.accountRecord.Name}"/>
+    <br/>
 
     <label class="slds-form-element__label">Industry: </label>
     <ui:outputText value="{!v.accountRecord.Industry}"/>
+    <br/>
 
     <label class="slds-form-element__label">Description: </label>
     <ui:outputTextArea value="{!v.accountRecord.Description}"/>
+    <br/>
 
     <label class="slds-form-element__label">Phone: </label>
     <ui:outputPhone value="{!v.accountRecord.Phone}"/>
