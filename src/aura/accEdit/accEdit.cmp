@@ -1,0 +1,26 @@
+<!--
+ - Created by jonatan.nieto on 21/06/2017.
+ -->
+
+<aura:component description="accEdit">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="accountRecord" type="Object" />
+
+    <force:recordData aura:id="recordEditor"
+                      layoutType="FULL"
+                      recordId="{!v.recordId}"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.record}"
+                      targetFields ="{!v.accountRecord}"
+                      fields="Name"
+                      mode="EDIT" />
+
+    <!-- Display an editing form -->
+    <ui:outputText value="Edit Account" title="Edit Account"/>
+
+    <lightning:input aura:id="recordName" name="recordName" label="Account Name"
+                     value="{!v.accountRecord.Name}" required="true"/>
+
+    <ui:button label="Save Account"/>
+</aura:component>
