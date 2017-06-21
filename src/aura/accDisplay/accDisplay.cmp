@@ -9,7 +9,7 @@
 
     <force:recordData recordId="{!v.recordId}"
                       targetRecord ="{!v.record}"
-                      targetFields ="{!v.simpleRecord}"
+                      targetFields ="{!v.accountRecord}"
                       fields="Id, Name"/>
 
     <label class="slds-form-element__label">Name: </label>
