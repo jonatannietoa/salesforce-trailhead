@@ -6,15 +6,25 @@
     <aura:attribute name="recordId" type="String" />
     <aura:attribute name="record" type="Object" />
     <aura:attribute name="accountRecord" type="Object" />
+    <aura:attribute name="recordSaveError" type="String" description="An error message bound to force:recordData"/>
+
 
     <force:recordData aura:id="recordEditor"
                       layoutType="FULL"
                       recordId="{!v.recordId}"
-                      targetError="{!v.recordError}"
+                      targetError="{!v.recordSaveError}"
                       targetRecord="{!v.record}"
                       targetFields ="{!v.accountRecord}"
                       fields="Name"
                       mode="EDIT" />
+
+    // Display error message
+    <aura:if isTrue="{!not(empty(v.recordSaveError))}">
+        <br />
+        Error: <ui:outputText value="{!v.recordSaveError}"/>
+    </aura:if>
+
+
 
     <!-- Display an editing form -->
     <ui:outputText value="Edit Account" title="Edit Account"/>
