@@ -1,0 +1,17 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>User Info</h1>
+
+  <p>First Name
+      {!$User.FirstName}</p>
+  <p>Last Name
+      {!$User.LastName}</p>    
+  <p>Email
+      {!$User.Email}</p>
+  <p>Phone
+      {!$User.Phone}</p>
+  <p>Title
+      {!$User.Title}</p>
+
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>
